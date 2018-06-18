@@ -78,7 +78,9 @@ public class Answerer {
                     final OWLBindingSet bindingSet = rs.next();
                     for (OWLBinding binding : bindingSet) {
                         OWLObject value = binding.getValue();
-                        response.appendText(ToStringRenderer.getInstance().getRendering(value) + ", ");
+                        String[] outputSs = ToStringRenderer.getInstance().getRendering(value).split("/");
+                        String outS = outputSs[outputSs.length-1].substring(0,outputSs[outputSs.length-1].length()-1);
+                        response.appendText(outS + ", ");
                         System.out.print(ToStringRenderer.getInstance().getRendering(value) + ", ");
                     }
                     response.appendText("\n");

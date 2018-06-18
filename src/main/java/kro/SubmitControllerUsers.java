@@ -32,6 +32,7 @@ public class SubmitControllerUsers {
 
     @FXML
     void submit(){
+        response.setText("");
         String filter =choice.getValue().toString() +" }";
         try{
             for (int i = 0; i <queries.length ; i=i+2) {
