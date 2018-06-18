@@ -1,0 +1,138 @@
+[PrefixDeclaration]
+:		http://www.w3.org/KRO_project/cosimo/
+dc:		http://purl.org/dc/elements/1.1/
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+skos:		http://www.w3.org/2004/02/skos/core#
+pizza:		http://www.co-ode.org/ontologies/pizza#
+terms:		http://purl.org/dc/terms/
+
+[MappingDeclaration] @collection [[
+mappingId	urn:MAPID-74337c357b714f0fabe7242d464fce13
+target		:{name} a :pizza#CheeseTopping . 
+source		select name from "public"."cheese_topping"
+
+mappingId	urn:MAPID-1
+target		:{name} a :pizza#FruitTopping . 
+source		select name from "public"."fruit_topping"
+
+mappingId	urn:MAPID-2
+target		:{name} a :pizza#HerbSpiceTopping . 
+source		select name from "public"."herb_spice_topping"
+
+mappingId	urn:MAPID-3
+target		:{name} a :pizza#MeatTopping . 
+source		select name from "public"."meat_topping"
+
+mappingId	urn:MAPID-4
+target		:{name} a :pizza#NutTopping . 
+source		select name from "public"."nut_topping"
+
+mappingId	urn:MAPID-5
+target		:{name} a :pizza#SauceTopping . 
+source		select name from "public"."sauce_topping"
+
+mappingId	urn:MAPID-6
+target		:{name} a :pizza#SeafoodTopping . 
+source		select name from "public"."seafood_topping"
+
+mappingId	urn:MAPID-7
+target		:{name} a :pizza#SpicyTopping . 
+source		select name from "public"."spicy_topping"
+
+mappingId	urn:MAPID-8
+target		:{name} a :pizza#VegetableTopping . 
+source		select name from "public"."vegetable_topping"
+
+mappingId	urn:b-1
+target		:{name} a :pizza#DeepPanBase . 
+source		select name from "public"."deep_pan_base"
+
+mappingId	urn:b-2
+target		:{name} a :pizza#ThinAndCrispyBase . 
+source		select name from "public"."thin_crispy_base"
+
+mappingId	urn:pizza
+target		:{name} a :pizza#Pizza . 
+source		select name from "public"."pizza"
+
+mappingId	urn:rel2
+target		:{name_pizza} :pizza#hasCheese :{name} . 
+source		select name_pizza, name from has_cheese
+
+mappingId	urn:rel3
+target		:{name_pizza} :pizza#hasFruit :{name} . 
+source		select name_pizza, name from has_fruit
+
+mappingId	urn:rel4
+target		:{name_pizza} :pizza#hasMeat :{name} . 
+source		select name_pizza, name from has_meat
+
+mappingId	urn:rel5
+target		:{name_pizza} :pizza#hasNut :{name} . 
+source		select name_pizza, name from has_nut
+
+mappingId	urn:rel6
+target		:{name_pizza} :pizza#hasSauce :{name} . 
+source		select name_pizza, name from has_sauce
+
+mappingId	urn:rel7
+target		:{name_pizza} :pizza#hasSeaFood :{name} . 
+source		select name_pizza, name from has_seafood
+
+mappingId	urn:rel9
+target		:{name_pizza} :pizza#hasHerbSpice :{name} . 
+source		select name_pizza, name from has_herbspice
+
+mappingId	urn:rel14
+target		:{name_pizza} :pizza#hasSpicy :{name} . 
+source		select name_pizza, name from has_spicy
+
+mappingId	urn:rel10
+target		:{name_pizza} :pizza#hasVegetable :{name} . 
+source		select name_pizza, name from has_vegetable
+
+mappingId	urn:rel12
+target		:{name_pizza} :pizza#hasTCB :{base} . 
+source		select name_pizza, base from has_tcb
+
+mappingId	urn:rel13
+target		:{name_pizza} :pizza#hasDPB :{base} . 
+source		select name_pizza, base from has_dpb
+
+mappingId	urn:bought
+target		:{id} :pizza#boughtPizza :{name_pizza} . 
+source		select name_pizza,id from bought;
+
+mappingId	urn:type
+target		:{id} :pizza#isType :{type} . 
+source		select id,type from users;
+
+mappingId	urn:MAPID-8bcfbe8cf28d4466b9f4e97f9811e95e
+target		:{id} a :pizza#Rich . 
+source		select id from users where type = 'rich';
+
+mappingId	urn:MAPID-e41e2419573c4de483e0ab2e04df2cd0
+target		:{id} a :pizza#Athlete . 
+source		select id from users where type = 'athlete';
+
+mappingId	urn:MAPID-cbaaaaf5c1a64e00b0137bc3eceab77d
+target		:{id} a :pizza#Researcher . 
+source		select id from users where type = 'researcher';
+
+mappingId	urn:MAPID-f64094cbe8594a51ba7adf718a07fa79
+target		:{id} a :pizza#Strange . 
+source		select id from users where type = 'strange';
+
+mappingId	urn:MAPID-a3e92f1435f74a208c2c6652a0172111
+target		:{id} a :pizza#Student . 
+source		select id from users where type = 'student';
+
+mappingId	urn:MAPID-5e051910577a45aa83ec098ae3e93f0e
+target		:{id} a :pizza#Worker . 
+source		select id from users where type = 'worker';
+]]
+

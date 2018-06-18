@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import java.lang.String?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="kro.VegetableController">
+    <center>
+        <VBox>
+            <VBox spacing="10">
+                <Label>Ingredients</Label>
+                <HBox spacing="10">
+                    <Button fx:id="add" onAction="#add">Add Ingredient</Button>
+                    <TextField fx:id="ingredient"></TextField>
+                </HBox>
+                <Label>Click on the ingredient to remove</Label>
+                <VBox fx:id="selectedIngredients"></VBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

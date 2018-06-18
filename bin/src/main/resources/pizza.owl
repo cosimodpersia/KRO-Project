@@ -1,0 +1,737 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/KRO_project/cosimo/"
+     xml:base="http://www.w3.org/KRO_project/cosimo/"
+     xmlns:pizza="http://www.co-ode.org/ontologies/pizza#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.w3.org/KRO_project/cosimo/pizza">
+        <owl:versionIRI rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasIngredient"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#PizzaBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasCheese -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasCheese">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#CheeseyPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#CheeseTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasDPB -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasDPB">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasBase"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#DeepPanBasePizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#DeepPanBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasFruit -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasFruit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#FruityPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#FruitTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasHerbSpice -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasHerbSpice">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#FragrantPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#HerbSpiceTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasIngredient">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Food"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Food"/>
+        <rdfs:comment xml:lang="en">NB Transitive - the ingredients of ingredients are ingredients of the whole</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasMeat -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasMeat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#MeatyPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#MeatTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasNut -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasNut">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#NutPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#NutTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasSauce -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasSauce">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#JuicyPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#SauceTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasSeaFood -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasSeaFood">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#SeaPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#SeafoodTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasSpicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasSpicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#SpicyPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#SpicyTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasTCB -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasTCB">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasBase"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ThinAndCrispyPizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ThinAndCrispyBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasIngredient"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#PizzaTopping"/>
+        <rdfs:comment xml:lang="en">Note that hasTopping is inverse functional because isToppingOf is functional</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#hasVegetable -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#hasVegetable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#hasTopping"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetablePizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetableTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#CarnivorePizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#CarnivorePizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ProteinPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#CheeseTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianTopping"/>
+        <rdfs:label xml:lang="en">CheeseTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#CheeseyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#CheeseyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#FatPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ProteinPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#DeepPanBase -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#PizzaBase"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ThinAndCrispyBase"/>
+        <skos:prefLabel xml:lang="en">Deep Pan Base</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#DeepPanBasePizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#DeepPanBasePizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#OilyPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ExpensivePizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ExpensivePizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ForRichPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#FatPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#FatPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#UnhealthyPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#Food -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#Food">
+        <rdfs:label xml:lang="en">Food</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ForAthletePizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ForAthletePizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ForDriverPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ForDriverPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ForItalianPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ForItalianPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ForResearcherPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ForResearcherPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ForRichPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ForRichPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ForStrangeGuyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ForStrangeGuyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ForStudentPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ForStudentPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ForWorkerPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ForWorkerPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#FragrantPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#FragrantPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#NormalPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#FruitTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#FruitTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianTopping"/>
+        <rdfs:label xml:lang="en">FruitTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#FruityPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#FruityPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#UnusualPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#HealthyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#HealthyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ForDriverPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ForResearcherPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ForStudentPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ForWorkerPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#HerbSpiceTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#HerbSpiceTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianTopping"/>
+        <rdfs:label xml:lang="en">HerbSpiceTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ItalianPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ItalianPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ForItalianPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#JuicyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#JuicyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#NormalPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#MeatTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#PizzaTopping"/>
+        <rdfs:label xml:lang="en">MeatTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#MeatyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#MeatyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#CarnivorePizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#FatPizza"/>
+        <skos:definition xml:lang="en">Any pizza that has at least one meat topping</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#NormalPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#NormalPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ItalianPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#NutPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#NutPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#UnusualPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#NutTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#NutTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianTopping"/>
+        <rdfs:label xml:lang="en">NutTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#NutrientPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#NutrientPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#OilyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#OilyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#FatPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#Pizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#Pizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Food"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#PizzaBase">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Food"/>
+        <skos:prefLabel xml:lang="en">Pizza Base</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#PizzaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Food"/>
+        <rdfs:label xml:lang="en">PizzaTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ProteinPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ProteinPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ForAthletePizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#NutrientPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#SauceTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#SauceTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianTopping"/>
+        <rdfs:label xml:lang="en">SauceTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#SeaPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#SeaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#CarnivorePizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ExpensivePizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#HealthyPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#SeafoodTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#SeafoodTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#PizzaTopping"/>
+        <rdfs:label xml:lang="en">SeafoodTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#SpicyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#SpicyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#UnhealthyPizza"/>
+        <skos:definition xml:lang="en">Any pizza that has a spicy topping is a SpicyPizza</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#SpicyTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#SpicyTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#PizzaTopping"/>
+        <rdfs:label xml:lang="en">SpicyTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ThinAndCrispyBase -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#PizzaBase"/>
+        <rdfs:label xml:lang="en">ThinAndCrispyBase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#ThinAndCrispyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#ThinAndCrispyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#HealthyPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#UnhealthyPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#UnhealthyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#UnusualPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#UnusualPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#ForStrangeGuyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VeganPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#VeganPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#VeganPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#VegetablePizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#VegetablePizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VeganPizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#VegetableTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#VegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianTopping"/>
+        <rdfs:label xml:lang="en">VegetableTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianPizza">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#HealthyPizza"/>
+        <skos:definition xml:lang="en">Any pizza that does not have fish topping and does not have meat topping is a VegetarianPizza. Note that instances of this class do not need to have any toppings at all.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#VegetarianTopping -->
+
+    <owl:Class rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#VegetarianTopping">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/KRO_project/cosimo/pizza#PizzaTopping"/>
+        <rdfs:label xml:lang="en">VegetarianTopping</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#America -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#America"/>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#England -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#England"/>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#France"/>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#Germany"/>
+    
+
+
+    <!-- http://www.w3.org/KRO_project/cosimo/pizza#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#Italy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#CheeseTopping"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#FruitTopping"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#HerbSpiceTopping"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#MeatTopping"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#NutTopping"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#SauceTopping"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#SeafoodTopping"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#VegetableTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#America"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#England"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#France"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#Germany"/>
+            <rdf:Description rdf:about="http://www.w3.org/KRO_project/cosimo/pizza#Italy"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
