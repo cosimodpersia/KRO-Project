@@ -62,11 +62,11 @@ public class SubmitControllerCraft {
                         sb.append(" this pizza is ");
                         sb.append(queries[i+1]+"\n");
                     }
-                    /*sb.append(" this pizza is ");
+                    sb.append(" this pizza is ");
                     if(!e){
                         sb.append("not ");
                     }
-                    sb.append("a "+queries[i+1]+"\n");*/
+                    sb.append(queries[i+1]+"\n");
 
             }
             if(!meat){

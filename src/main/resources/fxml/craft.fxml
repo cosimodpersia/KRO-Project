@@ -13,7 +13,7 @@
     <center>
             <VBox spacing="10">
                 <Label>Submit and check the class of your pizza</Label>
-                <Button fx:id="submit" onAction="#submit">Submit</Button>
+                <Button fx:id="submit" onAction="#submit">Query (Craft pizza!)</Button>
 
             </VBox>
     </center>

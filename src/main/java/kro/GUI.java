@@ -16,7 +16,7 @@ import java.net.URL;
 import java.util.Properties;
 
 public class GUI extends Application{
-    private static String PROPERTIES_FILE = "config.properties";
+    private static String PROPERTIES_FILE = "database.properties";
     private static Properties properties = new Properties();
 
     public static void main(String[] args) {
@@ -62,8 +62,4 @@ public class GUI extends Application{
         primaryStage.show();
     }
 
-    private HBox getUser(){
-        HBox user = new HBox();
-        return user;
-    }
 }

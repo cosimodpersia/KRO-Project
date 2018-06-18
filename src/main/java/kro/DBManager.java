@@ -23,10 +23,10 @@ public class DBManager {
 
 
     public static void init(Properties p) {
-        url = p.getProperty("url");
+        url = p.getProperty("jdbc.url");
         props = new Properties();
-        props.setProperty("user", p.getProperty("user"));
-        props.setProperty("password", p.getProperty("password"));
+        props.setProperty("user", p.getProperty("jdbc.user"));
+        props.setProperty("password", p.getProperty("jdbc.password"));
     }
 
     private static Connection connect() throws SQLException {
